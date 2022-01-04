@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'e413.pythonanywhere.com','127.0.0.1']
 
 STRIPE_SECRET_KEY = 'sk_test_51JxbxSDD12cUlUUS4b0ZknjKpDlsxDRQQXwHmqdqlH13WxOITrvEg5yN7rCdQZOKKYvLxdqZFZHAqA7i9hkZUSh000ELsxZGTL'
 
@@ -128,11 +128,15 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+# Media files
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')  # new folder for media
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
