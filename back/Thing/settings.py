@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'e413.pythonanywhere.com','127.0.0.1']
 
-STRIPE_SECRET_KEY = 'sk_test_51JxbxSDD12cUlUUS4b0ZknjKpDlsxDRQQXwHmqdqlH13WxOITrvEg5yN7rCdQZOKKYvLxdqZFZHAqA7i9hkZUSh000ELsxZGTL'
+STRIPE_SECRET_KEY = ''
 
 
 # Application definition
